@@ -7,7 +7,7 @@ SOURCE_FOLDER_PATH="./${TEMPLATE_FOLDER_NAME}"
 
 EXISTING_TEMPLATE_PATH="${DESTINATION_PATH}/${TEMPLATE_FOLDER_NAME}/"
 
-echo "${EXISTING_TEMPLATE_PATH}"
+#echo "${EXISTING_TEMPLATE_PATH}"
 # OPEN_CMD="open ${EXISTING_TEMPLATE_PATH}"
 # eval ${OPEN_CMD}
 # echo $("dirname ${EXISTING_TEMPLATE_PATH}")
@@ -17,6 +17,14 @@ then
 	exit 0
 fi
 
+if ! test -d "${DESTINATION_PATH}"
+then
+	echo "Creating \"${DESTINATION_PATH}\"..."
+	mkdir -p "${DESTINATION_PATH}"
+	echo "Created \"${DESTINATION_PATH}\"."
+fi
+
+echo "Adding XibView template at \"${EXISTING_TEMPLATE_PATH}\"..."
 cp -r "${SOURCE_FOLDER_PATH}" "${DESTINATION_PATH}"
 echo "Added XibView template at \"${EXISTING_TEMPLATE_PATH}\"."
 echo "Now you can create xib based views in a easier way :)"
