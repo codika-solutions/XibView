@@ -1,3 +1,4 @@
+
 # XibView
 A .xib based UIView.
 
@@ -12,7 +13,7 @@ It allows you to use a xib based view inside another xib based view, promoting r
 4. Set your class as first responder of your nib.
 
 ![Tip](assets/tip.png)
-Steps 2 to 4 can be automated using Xcode templates.
+Steps 2 to 4 can be automated using [Xcode templates](## Automation using XCode templates).
 
 ## Developing a .xib based custom view
 
