@@ -26,7 +26,7 @@ class XibView: UIView {
   private func setupFromXib() {
     let xibName = self.xibName ?? String(describing: type(of: self))
     
-    let viewsInXib = Bundle(for: type(of: self)).loadNibNamed(xibName!, owner: self, options: nil)
+    let viewsInXib = Bundle(for: type(of: self)).loadNibNamed(xibName, owner: self, options: nil)
     guard let view = viewsInXib?.first as? UIView else {
         return
     }
