@@ -1,9 +1,10 @@
 
 # XibView
-A .xib based UIView.
+A .xib based UIView, named `XibView`.
 
-A utility base class to develop custom views based on xib files.
-It allows you to use a xib based view inside another xib based view, promoting reusable, isolated and composable views.
+- A utility base class to develop custom views based on xib files. It allows you to use a xib based view inside another xib based view, promoting reusable, isolated and composable views.
+- An XCode template to facilitate creation of .xib based views are also added in both languages, swift and obj-c.
+- An XCode template to facilitate creation of .xib based cells.
 
 ## Instalation
 
@@ -23,7 +24,9 @@ In another view .xib or view controller .xib or .storyboard, add a UIView and ch
 
 ## Automation using XCode templates
 
-If you want to add the template, just download this repo, move to `./xcode-template` and run `./add-xibview-as-xcode-template`.
+### XibView
+
+If you want to add the template, just download this repo, move to `./xcode-template` and run `./add-xcode-templates.sh`.
 
 If you do so, you will see a XibView template when you create a new file to your project.
 
@@ -42,3 +45,9 @@ For objc:
 For swift:
 
 ![img4](assets/added-files-swift.png)
+
+### XibCell
+
+A `XibCell` template is also added.
+It creates a cell saving the time used to set `UITableViewCell` as subclass, removing the automated `TableViewCell` suffix and checking the `Also create Xib file` checkbox.
+So, you click on `XibCell`, enters the name of your cell (e.g.: `ItemCell`) and `ItemCell.swift` (or `ItemCell.h` and `ItemCell.m`) and `ItemCell.xib` are created.
